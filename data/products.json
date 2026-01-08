@@ -1,0 +1,381 @@
+[
+  {
+    "product_id": "PROD001",
+    "name": "Samsung Galaxy S23 Ultra",
+    "category": "Smartphone",
+    "price": 1199.99,
+    "stock": 45,
+    "description": "The Samsung Galaxy S23 Ultra features a stunning 6.8-inch Dynamic AMOLED 2X display with 120Hz refresh rate. Powered by Snapdragon 8 Gen 2 processor with 12GB RAM and 256GB storage. Quad camera system with 200MP main sensor, 12MP ultra-wide, 10MP telephoto with 3x optical zoom, and 10MP periscope with 10x optical zoom. 5G enabled with all-day 5000mAh battery and 45W super fast charging. Includes S Pen stylus. IP68 water and dust resistance.",
+    "specs": {
+      "display": "6.8-inch AMOLED, 120Hz",
+      "processor": "Snapdragon 8 Gen 2",
+      "ram": "12GB",
+      "storage": "256GB",
+      "camera": "200MP + 12MP + 10MP + 10MP",
+      "battery": "5000mAh",
+      "charging": "45W super fast charging",
+      "5g": true,
+      "water_resistance": "IP68",
+      "stylus": "S Pen included"
+    },
+    "features": ["S Pen stylus", "Wireless charging", "Reverse wireless charging", "In-display fingerprint sensor", "Night mode photography", "8K video recording"]
+  },
+  {
+    "product_id": "PROD002",
+    "name": "iPhone 15 Pro Max",
+    "category": "Smartphone",
+    "price": 1199.99,
+    "stock": 38,
+    "description": "Apple iPhone 15 Pro Max with titanium design and A17 Pro chip. Features 6.7-inch Super Retina XDR display with ProMotion technology up to 120Hz. Triple camera system with 48MP main camera, 12MP ultra-wide, and 12MP telephoto with 5x optical zoom. USB-C port with USB 3 speeds. Action button for quick access to features. All-day battery life with up to 29 hours video playback. Available in Natural Titanium, Blue Titanium, White Titanium, and Black Titanium.",
+    "specs": {
+      "display": "6.7-inch Super Retina XDR, ProMotion 120Hz",
+      "processor": "A17 Pro",
+      "ram": "8GB",
+      "storage": "256GB",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "29 hours video",
+      "charging": "USB-C, MagSafe wireless",
+      "5g": true,
+      "material": "Titanium",
+      "water_resistance": "IP68"
+    },
+    "features": ["Action button", "USB-C", "MagSafe", "Face ID", "Cinematic mode", "ProRAW and ProRes", "Emergency SOS via satellite"]
+  },
+  {
+    "product_id": "PROD003",
+    "name": "Sony WH-1000XM5 Headphones",
+    "category": "Audio",
+    "price": 399.99,
+    "stock": 67,
+    "description": "Industry-leading noise cancellation with Sony's HD Noise Cancelling Processor QN1. Premium sound quality with 40mm drivers and LDAC codec support. Up to 30 hours battery life with quick charging (3 min charge = 3 hours playback). Multipoint connection lets you switch between devices seamlessly. Speak-to-chat automatically pauses music when you start talking. Lightweight design with soft cushions for all-day comfort.",
+    "specs": {
+      "type": "Over-ear wireless",
+      "noise_cancellation": "Active (ANC)",
+      "battery": "30 hours",
+      "quick_charge": "3 min = 3 hours",
+      "bluetooth": "5.2",
+      "codec": "LDAC, AAC, SBC",
+      "weight": "250g",
+      "color_options": "Black, Silver"
+    },
+    "features": ["Active noise cancellation", "Multipoint connection", "Speak-to-chat", "Touch controls", "Foldable design", "Carrying case included", "Adaptive Sound Control"]
+  },
+  {
+    "product_id": "PROD004",
+    "name": "Apple AirPods Pro (2nd Gen)",
+    "category": "Audio",
+    "price": 249.99,
+    "stock": 92,
+    "description": "Apple AirPods Pro with Active Noise Cancellation and Adaptive Transparency. Custom high-excursion driver and amplifier for rich bass. H2 chip delivers improved audio performance. Up to 6 hours listening time with ANC on, 30 hours total with MagSafe charging case. Personalized Spatial Audio with dynamic head tracking. Four sizes of silicone tips for customizable fit. Sweat and water resistant (IPX4).",
+    "specs": {
+      "type": "In-ear wireless",
+      "noise_cancellation": "Active with Adaptive Transparency",
+      "battery": "6 hours (30 hours with case)",
+      "chip": "Apple H2",
+      "bluetooth": "5.3",
+      "water_resistance": "IPX4",
+      "charging": "MagSafe, Lightning, Qi wireless"
+    },
+    "features": ["Active Noise Cancellation", "Adaptive Transparency", "Personalized Spatial Audio", "Touch controls", "Find My support", "Conversation Awareness"]
+  },
+  {
+    "product_id": "PROD005",
+    "name": "Apple iPad Pro 12.9-inch (M2)",
+    "category": "Tablet",
+    "price": 1099.99,
+    "stock": 28,
+    "description": "The ultimate iPad experience with the powerful M2 chip. Stunning 12.9-inch Liquid Retina XDR display with ProMotion technology and True Tone. 12MP Wide camera and 10MP Ultra Wide camera with Center Stage. Works with Apple Pencil (2nd generation) and Magic Keyboard. All-day battery life with up to 10 hours of use. Available with Wi-Fi 6E and optional 5G. Face ID for secure authentication.",
+    "specs": {
+      "display": "12.9-inch Liquid Retina XDR, ProMotion 120Hz",
+      "processor": "Apple M2",
+      "ram": "8GB",
+      "storage": "128GB/256GB/512GB/1TB/2TB",
+      "camera_rear": "12MP Wide + 10MP Ultra Wide",
+      "camera_front": "12MP Ultra Wide with Center Stage",
+      "battery": "10 hours",
+      "connectivity": "Wi-Fi 6E, Optional 5G",
+      "ports": "USB-C Thunderbolt"
+    },
+    "features": ["Apple Pencil support", "Magic Keyboard compatible", "Face ID", "ProMotion display", "Center Stage", "Thunderbolt port", "Studio-quality mics"]
+  },
+  {
+    "product_id": "PROD006",
+    "name": "Samsung Galaxy Tab S9",
+    "category": "Tablet",
+    "price": 799.99,
+    "stock": 34,
+    "description": "Premium Android tablet with 11-inch Dynamic AMOLED 2X display and 120Hz refresh rate. Powered by Snapdragon 8 Gen 2 processor with 8GB RAM. Includes S Pen in the box for note-taking and drawing. IP68 water and dust resistant - the most durable Galaxy Tab ever. All-day 8,400mAh battery with 45W super fast charging. DeX mode transforms it into a desktop experience.",
+    "specs": {
+      "display": "11-inch Dynamic AMOLED 2X, 120Hz",
+      "processor": "Snapdragon 8 Gen 2",
+      "ram": "8GB",
+      "storage": "128GB/256GB (expandable)",
+      "camera_rear": "13MP + 8MP ultra-wide",
+      "camera_front": "12MP ultra-wide",
+      "battery": "8400mAh",
+      "connectivity": "Wi-Fi 6E, Optional 5G",
+      "water_resistance": "IP68"
+    },
+    "features": ["S Pen included", "IP68 rated", "DeX mode", "Four AKG speakers", "In-display fingerprint", "Book Cover Keyboard compatible"]
+  },
+  {
+    "product_id": "PROD007",
+    "name": "MacBook Pro 14-inch (M3 Pro)",
+    "category": "Laptop",
+    "price": 1999.99,
+    "stock": 19,
+    "description": "Supercharged for professionals with M3 Pro chip. Stunning 14.2-inch Liquid Retina XDR display with 3024x1964 resolution. Up to 18 hours battery life. Advanced camera and audio system with studio-quality mics. Three Thunderbolt 4 ports, HDMI port, SDXC card slot, and MagSafe 3 charging. Space Black or Silver aluminum finish. Backlit Magic Keyboard with Touch ID.",
+    "specs": {
+      "display": "14.2-inch Liquid Retina XDR, 3024x1964",
+      "processor": "Apple M3 Pro (11-core CPU, 14-core GPU)",
+      "ram": "18GB unified memory",
+      "storage": "512GB SSD",
+      "battery": "Up to 18 hours",
+      "weight": "3.5 lbs",
+      "ports": "3x Thunderbolt 4, HDMI, SDXC, MagSafe 3",
+      "color_options": "Space Black, Silver"
+    },
+    "features": ["Liquid Retina XDR display", "MagSafe 3", "Touch ID", "Studio-quality mics", "1080p FaceTime camera", "Six-speaker sound system"]
+  },
+  {
+    "product_id": "PROD008",
+    "name": "Dell XPS 15",
+    "category": "Laptop",
+    "price": 1799.99,
+    "stock": 23,
+    "description": "Premium Windows laptop with stunning 15.6-inch InfinityEdge display. Powered by 13th Gen Intel Core i7 processor with NVIDIA GeForce RTX 4050 graphics. 16GB DDR5 RAM and 512GB NVMe SSD. 86WHr battery provides extended runtime. Precision touchpad and backlit keyboard. CNC-machined aluminum chassis. Thunderbolt 4 ports for fast connectivity.",
+    "specs": {
+      "display": "15.6-inch FHD+, 16:10, 500 nits",
+      "processor": "Intel Core i7-13700H",
+      "ram": "16GB DDR5",
+      "storage": "512GB NVMe SSD",
+      "graphics": "NVIDIA GeForce RTX 4050 6GB",
+      "battery": "86WHr, up to 13 hours",
+      "weight": "4.23 lbs",
+      "ports": "2x Thunderbolt 4, USB-C, SD card reader"
+    },
+    "features": ["RTX graphics", "Thunderbolt 4", "Fingerprint reader", "Backlit keyboard", "Killer Wi-Fi 6E", "Premium audio"]
+  },
+  {
+    "product_id": "PROD009",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 11",
+    "category": "Laptop",
+    "price": 1699.99,
+    "stock": 31,
+    "description": "Ultra-lightweight business laptop weighing just 2.48 lbs. 14-inch WUXGA display with low blue light technology. 13th Gen Intel Core processors with Intel vPro platform. Military-grade durability (MIL-STD-810H tested). Up to 57WHr battery. Legendary ThinkPad keyboard with TrackPoint. Enhanced security features including fingerprint reader and webcam privacy shutter.",
+    "specs": {
+      "display": "14-inch WUXGA (1920x1200), 400 nits",
+      "processor": "Intel Core i7-1365U vPro",
+      "ram": "16GB LPDDR5",
+      "storage": "512GB NVMe SSD",
+      "battery": "57WHr, up to 16 hours",
+      "weight": "2.48 lbs",
+      "ports": "2x Thunderbolt 4, 2x USB-A, HDMI",
+      "durability": "MIL-STD-810H"
+    },
+    "features": ["Ultra-lightweight", "ThinkPad keyboard", "TrackPoint", "Fingerprint reader", "Webcam privacy shutter", "Rapid Charge"]
+  },
+  {
+    "product_id": "PROD010",
+    "name": "LG 27-inch 4K UHD Monitor",
+    "category": "Monitor",
+    "price": 449.99,
+    "stock": 41,
+    "description": "Professional 27-inch 4K UHD (3840x2160) IPS display with HDR10 support. 99% sRGB color gamut for accurate color reproduction. USB-C connectivity with 60W power delivery. AMD FreeSync technology for smooth gaming. Flicker Safe and Reader Mode reduce eye strain. VESA mount compatible. Adjustable stand with height, tilt, and pivot.",
+    "specs": {
+      "display": "27-inch IPS, 4K UHD (3840x2160)",
+      "refresh_rate": "60Hz",
+      "response_time": "5ms",
+      "color_gamut": "99% sRGB",
+      "hdr": "HDR10",
+      "connectivity": "USB-C (60W PD), HDMI, DisplayPort",
+      "stand": "Height/tilt/pivot adjustable",
+      "vesa": "100x100mm"
+    },
+    "features": ["4K UHD resolution", "USB-C with Power Delivery", "HDR10", "AMD FreeSync", "Flicker Safe", "On-Screen Control", "Split screen"]
+  },
+  {
+    "product_id": "PROD011",
+    "name": "Samsung 34-inch Ultrawide Curved Monitor",
+    "category": "Monitor",
+    "price": 599.99,
+    "stock": 27,
+    "description": "Immersive 34-inch ultrawide curved monitor with 21:9 aspect ratio and WQHD resolution (3440x1440). 1000R curvature matches the human eye for maximum immersion. 100Hz refresh rate with AMD FreeSync Premium for smooth gameplay. Picture-by-Picture and Picture-in-Picture modes for multitasking. Eye Saver Mode and Flicker Free technology.",
+    "specs": {
+      "display": "34-inch VA curved, WQHD (3440x1440)",
+      "curvature": "1000R",
+      "refresh_rate": "100Hz",
+      "response_time": "4ms",
+      "aspect_ratio": "21:9",
+      "connectivity": "USB-C, HDMI, DisplayPort",
+      "stand": "Height/tilt adjustable",
+      "vesa": "100x100mm"
+    },
+    "features": ["Ultrawide 21:9", "1000R curve", "100Hz", "AMD FreeSync Premium", "PBP/PIP modes", "Eye Saver Mode", "Game Mode"]
+  },
+  {
+    "product_id": "PROD012",
+    "name": "Logitech MX Master 3S Mouse",
+    "category": "Accessories",
+    "price": 99.99,
+    "stock": 78,
+    "description": "Premium wireless mouse with ultra-quiet clicks and 8K DPI sensor for precise tracking on any surface. MagSpeed electromagnetic scrolling allows you to scroll 1000 lines per second. Customizable buttons with Logi Options+ software. Multi-device connectivity supports up to 3 devices with easy switching. Rechargeable battery lasts up to 70 days. Ergonomic design reduces hand strain.",
+    "specs": {
+      "connectivity": "Bluetooth, USB receiver",
+      "sensor": "8000 DPI",
+      "battery": "70 days per charge",
+      "buttons": "7 programmable",
+      "scroll_wheel": "MagSpeed electromagnetic",
+      "compatibility": "Windows, Mac, Linux, iPad",
+      "charging": "USB-C"
+    },
+    "features": ["Multi-device support", "Silent clicks", "MagSpeed scroll wheel", "Ergonomic design", "USB-C charging", "App-specific customization", "Precision tracking"]
+  },
+  {
+    "product_id": "PROD013",
+    "name": "Keychron K8 Pro Mechanical Keyboard",
+    "category": "Accessories",
+    "price": 109.99,
+    "stock": 52,
+    "description": "Wireless mechanical keyboard with hot-swappable switches and QMK/VIA support. Compact 80% tenkeyless layout saves desk space. Gasket-mounted design provides superior typing experience. RGB backlighting with per-key customization. Works with Windows, Mac, and Linux. Up to 240 hours battery life. Includes Keychron K Pro mechanical switches (Red, Blue, or Brown).",
+    "specs": {
+      "layout": "TKL (87 keys)",
+      "switches": "Hot-swappable mechanical (Red/Blue/Brown)",
+      "connectivity": "Wireless 2.4GHz, Bluetooth 5.1, USB-C wired",
+      "battery": "4000mAh, up to 240 hours",
+      "backlighting": "RGB per-key",
+      "compatibility": "Windows, Mac, Linux",
+      "construction": "Aluminum frame, gasket mount"
+    },
+    "features": ["Hot-swappable switches", "QMK/VIA programmable", "Gasket mount", "RGB backlighting", "Wireless and wired", "Mac/Windows compatible", "Premium build"]
+  },
+  {
+    "product_id": "PROD014",
+    "name": "Anker PowerCore 20000mAh Power Bank",
+    "category": "Accessories",
+    "price": 49.99,
+    "stock": 103,
+    "description": "High-capacity 20000mAh portable charger with PowerIQ and VoltageBoost technology for optimized charging. Dual USB ports allow charging two devices simultaneously. Charges iPhone 13 about 4 times, Galaxy S21 about 3.5 times. MultiProtect safety system provides surge protection, short circuit prevention, and temperature control. Compact design fits easily in bags.",
+    "specs": {
+      "capacity": "20000mAh (72Wh)",
+      "input": "USB-C 18W",
+      "output": "USB-A 18W x2",
+      "charging_time": "10 hours",
+      "weight": "12.5 oz",
+      "dimensions": "6.3 x 2.4 x 0.9 inches",
+      "safety": "MultiProtect system"
+    },
+    "features": ["20000mAh capacity", "Fast charging", "Dual USB ports", "PowerIQ technology", "MultiProtect safety", "LED indicator", "Travel-friendly"]
+  },
+  {
+    "product_id": "PROD015",
+    "name": "Samsung T7 Portable SSD 1TB",
+    "category": "Storage",
+    "price": 109.99,
+    "stock": 64,
+    "description": "Ultra-fast portable SSD with read speeds up to 1050 MB/s and write speeds up to 1000 MB/s. Compact and lightweight design with shock-resistant solid aluminum unibody. USB 3.2 Gen 2 interface with backward compatibility. Password protection and AES 256-bit hardware encryption. Compatible with Windows, Mac, Android devices, and gaming consoles.",
+    "specs": {
+      "capacity": "1TB",
+      "interface": "USB 3.2 Gen 2 (10Gbps)",
+      "read_speed": "Up to 1050 MB/s",
+      "write_speed": "Up to 1000 MB/s",
+      "encryption": "AES 256-bit hardware",
+      "dimensions": "3.3 x 2.2 x 0.3 inches",
+      "weight": "2 oz"
+    },
+    "features": ["Ultra-fast speeds", "Compact design", "Hardware encryption", "Password protection", "Shock-resistant", "3-year warranty", "Cross-platform compatible"]
+  },
+  {
+    "product_id": "PROD016",
+    "name": "WD My Book 8TB External Hard Drive",
+    "category": "Storage",
+    "price": 179.99,
+    "stock": 38,
+    "description": "Massive 8TB desktop external hard drive for backup and storage. USB 3.0 connectivity with transfer rates up to 5 Gbps. Includes WD Backup software and WD Discovery software for easy setup. Password protection and hardware encryption keep files secure. Compatible with USB 2.0 and USB 3.0 ports. Formatted for Windows, reformatting required for Mac.",
+    "specs": {
+      "capacity": "8TB",
+      "interface": "USB 3.0",
+      "transfer_rate": "Up to 5 Gbps",
+      "dimensions": "6.7 x 1.9 x 5.5 inches",
+      "weight": "2.2 lbs",
+      "compatibility": "Windows (reformatting req. for Mac)",
+      "power": "External AC adapter"
+    },
+    "features": ["8TB capacity", "USB 3.0", "WD Backup software", "Password protection", "Hardware encryption", "Automatic backup", "Desktop design"]
+  },
+  {
+    "product_id": "PROD017",
+    "name": "Logitech C920 HD Pro Webcam",
+    "category": "Accessories",
+    "price": 79.99,
+    "stock": 89,
+    "description": "Full HD 1080p webcam at 30fps for professional video calls. Dual stereo microphones capture natural sound. Autofocus and light correction adjust to lighting conditions. 78-degree field of view is perfect for solo calls or small groups. Works with popular video calling platforms including Zoom, Microsoft Teams, and Skype. Universal clip fits laptops, monitors, and tripods.",
+    "specs": {
+      "resolution": "1080p at 30fps, 720p at 30fps",
+      "field_of_view": "78 degrees",
+      "microphones": "Dual stereo",
+      "focus": "Autofocus",
+      "connectivity": "USB 2.0",
+      "compatibility": "Windows 7+, macOS 10.10+, Chrome OS",
+      "mount": "Universal clip/tripod"
+    },
+    "features": ["Full HD 1080p", "Autofocus", "Light correction", "Dual microphones", "Wide field of view", "Universal mounting", "Plug-and-play"]
+  },
+  {
+    "product_id": "PROD018",
+    "name": "Blue Yeti USB Microphone",
+    "category": "Audio",
+    "price": 129.99,
+    "stock": 47,
+    "description": "Professional USB microphone for streaming, podcasting, and recording. Three-capsule array with four pickup patterns (cardioid, bidirectional, omnidirectional, stereo). Zero-latency headphone monitoring with volume control. Adjustable desktop stand with built-in shock mount. Studio-quality sound with 20Hz-20kHz frequency response. Plug-and-play with Windows and Mac.",
+    "specs": {
+      "type": "Condenser USB microphone",
+      "pickup_patterns": "Cardioid, Bidirectional, Omnidirectional, Stereo",
+      "frequency_response": "20Hz - 20kHz",
+      "sample_rate": "48kHz",
+      "bit_rate": "16-bit",
+      "connectivity": "USB",
+      "headphone_output": "3.5mm jack",
+      "compatibility": "Windows, macOS"
+    },
+    "features": ["Four pickup patterns", "Zero-latency monitoring", "Gain control", "Mute button", "Adjustable stand", "Studio sound quality", "Plug-and-play"]
+  },
+  {
+    "product_id": "PROD019",
+    "name": "Razer DeathAdder V3 Gaming Mouse",
+    "category": "Gaming",
+    "price": 69.99,
+    "stock": 71,
+    "description": "Lightweight ergonomic gaming mouse weighing only 59g. Focus Pro 30K optical sensor with 30,000 DPI and 750 IPS tracking. Razer Optical Mouse Switches Gen-3 rated for 90 million clicks. Up to 90 hours battery life. HyperSpeed Wireless technology provides lag-free performance. Customizable with Razer Synapse software. Includes USB-C charging cable.",
+    "specs": {
+      "sensor": "Focus Pro 30K Optical",
+      "dpi": "Up to 30,000",
+      "ips": "750",
+      "polling_rate": "1000Hz",
+      "switches": "Optical Gen-3 (90M clicks)",
+      "battery": "Up to 90 hours",
+      "weight": "59g",
+      "connectivity": "HyperSpeed Wireless, USB-C wired"
+    },
+    "features": ["Ultra-lightweight", "30K DPI sensor", "Optical switches", "90-hour battery", "Wireless and wired modes", "Ergonomic design", "Customizable"]
+  },
+  {
+    "product_id": "PROD020",
+    "name": "SteelSeries Arctis Nova Pro Wireless Gaming Headset",
+    "category": "Gaming",
+    "price": 349.99,
+    "stock": 22,
+    "description": "Premium wireless gaming headset with dual-battery system for unlimited gameplay. Active Noise Cancellation blocks out distractions. High Fidelity Drivers with 360° Spatial Audio. ClearCast Gen 2 mic with AI-powered noise cancellation. GameDAC Gen 2 audio system with OLED display. Compatible with PC, PlayStation, and Xbox. Comfortable AirWeave memory foam cushions.",
+    "specs": {
+      "type": "Over-ear wireless gaming",
+      "drivers": "40mm High Fidelity",
+      "frequency_response": "10Hz - 40kHz",
+      "microphone": "ClearCast Gen 2 bidirectional",
+      "battery": "Dual system, 22+ hours per battery",
+      "connectivity": "2.4GHz wireless, Bluetooth, 3.5mm",
+      "compatibility": "PC, PS5, PS4, Xbox, Switch",
+      "weight": "338g"
+    },
+    "features": ["Active Noise Cancellation", "Dual-battery system", "360° Spatial Audio", "AI noise cancellation mic", "GameDAC Gen 2", "Multi-platform", "Premium comfort"]
+  }
+]

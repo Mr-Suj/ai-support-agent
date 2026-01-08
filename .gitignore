@@ -1,0 +1,62 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables (API KEYS - CRITICAL!)
+.env
+.env.local
+.env.*.local
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.so
+.Python
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+data/ecommerce.db
+
+# Vector Database Files
+data/faiss_index.bin
+data/product_metadata.pkl
+faiss_index/
+chroma_db/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/

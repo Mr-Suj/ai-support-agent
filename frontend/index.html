@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Customer Support Agent</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                    <h1>AI Support Agent</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="newChatBtn" type="button" class="btn-secondary" title="Start new conversation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    New Chat
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container" id="chatContainer">
+            <!-- Messages Container -->
+            <div class="messages-wrapper">
+                <!-- Welcome Message -->
+                <div class="welcome-message" id="welcomeMessage">
+                    <div class="welcome-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h2>Welcome to AI Customer Support</h2>
+                    <p>Ask me anything about your orders, products, or past purchases!</p>
+                    <div class="suggestion-chips">
+                        <button type="button" class="chip" data-query="Where is my order?">📦 Track my order</button>
+                        <button type="button" class="chip" data-query="Tell me about Samsung Galaxy S23 Ultra">📱 Product info</button>
+                        <button type="button" class="chip" data-query="What products did I order recently?">🛍️ My purchases</button>
+                    </div>
+                </div>
+
+                <!-- Messages will appear here -->
+                <div class="messages" id="messages"></div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <!-- Input Area -->
+<footer class="input-container">
+    <form id="chatForm" class="input-wrapper">
+        <textarea 
+            id="messageInput" 
+            class="message-input" 
+            placeholder="Type your message here..." 
+            rows="1"
+            maxlength="1000"
+        ></textarea>
+        <button id="sendBtn" type="submit" class="btn-send" title="Send message">
+            <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+        </button>
+    </form>
+    <div class="input-footer">
+        <span class="char-count" id="charCount">0 / 1000</span>
+        <span class="session-info">Session: <span id="sessionDisplay">Loading...</span></span>
+    </div>
+</footer>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
