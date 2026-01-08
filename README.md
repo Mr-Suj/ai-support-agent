@@ -340,8 +340,8 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@Mr-Suj](https://github.com/Mr-Suj)
+**Sujal Gowda J M**
+- GitHub: [Mr-Suj](https://github.com/Mr-Suj)
 - LinkedIn: [sujalgowda007](https://www.linkedin.com/in/sujalgowda007)
 - Email: sujalgowda42@gmail.com
 
