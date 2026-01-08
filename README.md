@@ -59,7 +59,8 @@ Intent Classifier (LLM)
 - **SQLAlchemy**: ORM for SQL database operations
 - **FAISS**: Facebook's vector similarity search
 - **Sentence Transformers**: Generate text embeddings
-- **Ollama/OpenAI/Anthropic/Gemini**: LLM providers
+- **Ollama**: LLM provider for local development (Free)
+- **Google gemini**: LLM provider for production (Low latency)
 
 ### **Frontend**
 - **HTML5**: Semantic markup with form-controlled submission
