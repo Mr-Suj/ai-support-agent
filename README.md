@@ -59,7 +59,8 @@ Intent Classifier (LLM)
 - **SQLAlchemy**: ORM for SQL database operations
 - **FAISS**: Facebook's vector similarity search
 - **Sentence Transformers**: Generate text embeddings
-- **Ollama/OpenAI/Anthropic/Gemini**: LLM providers
+- **Ollama**: LLM provider for local development (Free)
+- **Google gemini**: LLM provider for production (Low latency)
 
 ### **Frontend**
 - **HTML5**: Semantic markup with form-controlled submission
@@ -340,8 +341,8 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@Mr-Suj](https://github.com/Mr-Suj)
+**Sujal Gowda J M**
+- GitHub: [Mr-Suj](https://github.com/Mr-Suj)
 - LinkedIn: [sujalgowda007](https://www.linkedin.com/in/sujalgowda007)
 - Email: sujalgowda42@gmail.com
 
