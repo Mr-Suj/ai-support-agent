@@ -1,28 +1,44 @@
-from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 import os
 import pickle
 from typing import List, Optional
+import os
+from dotenv import load_dotenv
+from google import genai
+
+load_dotenv()
+
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini")
 
 # =============================
-# Lazy-loaded embedding model
+# Gemini Embedding Client
 # =============================
-_embedding_model = None
+_gemini_client = None
 
 
-def get_embedding_model():
+def get_gemini_client():
+    global _gemini_client
+    if _gemini_client is None:
+        _gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+    return _gemini_client
+
+
+def generate_embeddings(texts: List[str]) -> np.ndarray:
     """
-    Lazily load the embedding model to avoid Railway build timeouts.
+    Generate embeddings using Gemini (Production-safe)
     """
-    global _embedding_model
+    client = get_gemini_client()
+    embeddings = []
 
-    if _embedding_model is None:
-        print("Loading embedding model (lazy)...")
-        _embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-        print("✅ Embedding model loaded!")
+    for text in texts:
+        res = client.models.embed_content(
+            model="text-embedding-004",
+            contents=text
+        )
+        embeddings.append(res.embedding)
 
-    return _embedding_model
+    return np.array(embeddings).astype("float32")
 
 
 # =============================
@@ -50,11 +66,8 @@ class VectorDB:
             pickle.dump(self.metadata, f)
 
     def add_documents(self, documents: List[dict]):
-        model = get_embedding_model()
-
         texts = [doc["text"] for doc in documents]
-        embeddings = model.encode(texts, convert_to_numpy=True)
-        embeddings = np.array(embeddings).astype("float32")
+        embeddings = generate_embeddings(texts)
 
         if self.index is None:
             dim = embeddings.shape[1]
@@ -68,9 +81,7 @@ class VectorDB:
         if self.index is None:
             return []
 
-        model = get_embedding_model()
-        query_embedding = model.encode([query], convert_to_numpy=True)
-        query_embedding = np.array(query_embedding).astype("float32")
+        query_embedding = generate_embeddings([query])
 
         distances, indices = self.index.search(query_embedding, top_k)
 
@@ -93,14 +104,13 @@ VECTOR_DB = VectorDB(
 
 # =============================
 # BACKWARD-COMPATIBILITY API
-# (Required by retriever.py)
 # =============================
 
 def search_products(query: str, top_k: int = 5) -> List[dict]:
     return VECTOR_DB.search(query, top_k)
 
 
-def search_products_by_ids(product_ids: List[int]) -> List[dict]:
+def search_products_by_ids(product_ids: List[int], query: str = "") -> List[dict]:
     if not VECTOR_DB.metadata:
         return []
 
