@@ -3,13 +3,10 @@ import numpy as np
 import os
 import pickle
 from typing import List, Optional
-import os
 from dotenv import load_dotenv
 from google import genai
 
 load_dotenv()
-
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini")
 
 # =============================
 # Gemini Embedding Client
@@ -25,24 +22,21 @@ def get_gemini_client():
 
 
 def generate_embeddings(texts: List[str]) -> np.ndarray:
-    """
-    Generate embeddings using Gemini (Production-safe)
-    """
     client = get_gemini_client()
-    embeddings = []
+    vectors = []
 
     for text in texts:
         res = client.models.embed_content(
             model="text-embedding-004",
             contents=text
         )
-        embeddings.append(res.embedding)
+        vectors.append(res.embedding)
 
-    return np.array(embeddings).astype("float32")
+    return np.array(vectors).astype("float32")
 
 
 # =============================
-# VectorDB class
+# VectorDB (SAFE CLOUD VERSION)
 # =============================
 class VectorDB:
     def __init__(self, index_path: str, metadata_path: str):
@@ -51,16 +45,28 @@ class VectorDB:
         self.index = None
         self.metadata = []
 
+        # DO NOT load files at startup
+        self._safe_load()
+
+    def _safe_load(self):
         if os.path.exists(self.index_path) and os.path.exists(self.metadata_path):
-            self._load_index()
-
-    def _load_index(self):
-        with open(self.metadata_path, "rb") as f:
-            self.metadata = pickle.load(f)
-
-        self.index = faiss.read_index(self.index_path)
+            try:
+                with open(self.metadata_path, "rb") as f:
+                    self.metadata = pickle.load(f)
+                self.index = faiss.read_index(self.index_path)
+                print("✅ FAISS index loaded")
+            except Exception as e:
+                print(f"⚠️ Failed to load FAISS index: {e}")
+                self.index = None
+                self.metadata = []
+        else:
+            print("⚠️ FAISS files not found. Starting with empty index.")
+            self.index = None
+            self.metadata = []
 
     def _save_index(self):
+        if self.index is None:
+            return
         faiss.write_index(self.index, self.index_path)
         with open(self.metadata_path, "wb") as f:
             pickle.dump(self.metadata, f)
@@ -82,7 +88,6 @@ class VectorDB:
             return []
 
         query_embedding = generate_embeddings([query])
-
         distances, indices = self.index.search(query_embedding, top_k)
 
         results = []
@@ -94,7 +99,7 @@ class VectorDB:
 
 
 # =============================
-# GLOBAL DB INSTANCE
+# GLOBAL INSTANCE (SAFE)
 # =============================
 VECTOR_DB = VectorDB(
     index_path="database/vector.index",
@@ -103,17 +108,13 @@ VECTOR_DB = VectorDB(
 
 
 # =============================
-# BACKWARD-COMPATIBILITY API
+# API COMPATIBILITY
 # =============================
-
 def search_products(query: str, top_k: int = 5) -> List[dict]:
     return VECTOR_DB.search(query, top_k)
 
 
 def search_products_by_ids(product_ids: List[int], query: str = "") -> List[dict]:
-    if not VECTOR_DB.metadata:
-        return []
-
     return [
         item for item in VECTOR_DB.metadata
         if item.get("product_id") in product_ids
@@ -121,11 +122,7 @@ def search_products_by_ids(product_ids: List[int], query: str = "") -> List[dict
 
 
 def get_product_by_id(product_id: int) -> Optional[dict]:
-    if not VECTOR_DB.metadata:
-        return None
-
     for item in VECTOR_DB.metadata:
         if item.get("product_id") == product_id:
             return item
-
     return None
