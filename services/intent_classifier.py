@@ -1,66 +1,54 @@
 import os
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 load_dotenv()
 
-LLM_PROVIDER = os.getenv("LLM_PROVIDER", "local")
-
-# -----------------------------
-# Gemini setup (CORRECT import)
-# -----------------------------
-if LLM_PROVIDER == "gemini":
-    import google.generativeai as genai
-    genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 def classify_intent(query: str) -> dict:
     """
-    Classify user intent using LLM.
-
-    Returns:
-    {
-        "intent": "ORDER_DETAILS" | "PRODUCT_DETAILS" | "ORDER_PRODUCT_DETAILS",
-        "entities": {}
-    }
+    Classify user intent using Gemini (lightweight).
+    Returns intent + extracted entities.
     """
 
     prompt = f"""
 You are an intent classification system for an e-commerce support chatbot.
 
-Classify the user's query into ONE of these intents:
-- ORDER_DETAILS
-- PRODUCT_DETAILS
-- ORDER_PRODUCT_DETAILS
+Classify the user query into ONE of the following intents:
+1. ORDER_DETAILS
+2. PRODUCT_DETAILS
+3. ORDER_PRODUCT_DETAILS
+
+Also extract entities if present (like tracking_number or product_name).
+
+Respond ONLY in valid JSON format like:
+{{
+  "intent": "ORDER_DETAILS",
+  "entities": {{
+    "tracking_number": "TRK12345"
+  }}
+}}
 
 User query:
-"{query}"
-
-Return ONLY valid JSON in this format:
-{{
-  "intent": "<INTENT>",
-  "entities": {{}}
-}}
+{query}
 """
 
-    # -----------------------------
-    # Gemini intent classification
-    # -----------------------------
-    if LLM_PROVIDER == "gemini":
-        model = genai.GenerativeModel("gemini-1.5-flash")
-        response = model.generate_content(
-            prompt,
-            generation_config={
-                "temperature": 0,
-                "max_output_tokens": 100
-            }
-        )
+    model = genai.GenerativeModel("gemini-1.5-flash")
 
-        return eval(response.text.strip())
+    response = model.generate_content(
+        prompt,
+        generation_config={
+            "temperature": 0,
+            "max_output_tokens": 200
+        }
+    )
 
-    # -----------------------------
-    # Local / fallback
-    # -----------------------------
-    return {
-        "intent": "PRODUCT_DETAILS",
-        "entities": {}
-    }
+    try:
+        return eval(response.text)
+    except Exception:
+        return {
+            "intent": "UNKNOWN",
+            "entities": {}
+        }
