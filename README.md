@@ -299,22 +299,6 @@ Remember to set environment variables in your deployment platform.
 
 ---
 
-## 🎤 Key Technical Highlights
-
-Use this project to demonstrate:
-
-1. **RAG Architecture**: "I built a hybrid RAG system combining structured (SQL) and unstructured (vector) data for accurate, grounded responses."
-
-2. **System Design**: "I designed a modular architecture with clear separation: intent classification → data retrieval → response generation."
-
-3. **AI/ML Integration**: "I integrated LLMs for intent detection and response generation, with fallback options for different providers."
-
-4. **Full-Stack Skills**: "I implemented both backend (FastAPI, databases) and frontend (vanilla JS, modern UI) from scratch."
-
-5. **Production Readiness**: "I implemented conversation memory, error handling, session management, and comprehensive testing."
-
----
-
 ## 🔮 Future Enhancements
 
 - [ ] User authentication and authorization
